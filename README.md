@@ -27,6 +27,7 @@ offers a public bug tracker and other tools for developers.
   Debian has more software/packages available.
   Debian community members still maintain it.
   It comes with an easy installation package(apt).
+![Alt text](https://hackaday.com/wp-content/uploads/2021/06/rocky-linux-featured.jpg)
 
 # What is The purpose of virtual machines?
 - Cost savings
