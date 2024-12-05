@@ -66,9 +66,11 @@ AppArmor ("Application Armor") is a Linux kernel security module that enables sy
 
 **How to add and remove port 8080 in UFW?**
 ```bash
-sudo ufw allow 8080/tcp     #allow
+sudo ufw status             #list all the rules
+sudo ufw allow 8080/tcp     #add a rule
 sudo ufw status             #check
-sudo ufw deny 8080          #deny (yes yes)
+# sudo ufw deny 8080        for deny the connection?
+sudo ufw delete 3           # 3 the number of the rule 8080
 ```
 
 ---
@@ -81,6 +83,32 @@ sudo ufw deny 8080          #deny (yes yes)
   
 - **TCP/IP**: SSH runs on top of the TCP/IP protocol, ensuring the secure delivery of data packets between devices. While HTTPS verifies the identity of a web server, SSH allows for remote command-line access.
 
+-***check the status***
+```bash
+sudo service ssh status
+```
+
+
+-***port 4242***
+```bash
+sudo vim /etc/ssh/sshd_config
+```
+
+
+- **Verify SSH Port**:
+```bash
+sudo ufw status
+```
+
+- **Login to SSH**:
+```bash
+ssh username@yourip -p 4242
+```
+
+- **Login as Root (should be disabled for security)**:
+```bash
+ssh root@yourip -p 4242
+```
 ---
 
 # User Management
@@ -124,18 +152,6 @@ lsblk
 sudo nano /etc/hostname
 ```
 
-- ***Where is sudo logs in /var/log/sudo?***
-```bash
-cd /var/log/sudo/00/00 && ls
-```
-You will see a lot of directories with names like 01 2B 9S 4D etc. They contain the logs we need.
-
-- ***how to see the input and output log***
-```bash
-cat log          #Input log
-cat ttyout       #Output log
-```
-
 ### How LVM Works
 
 LVM (Logical Volume Management) allows for flexible disk storage management by abstracting physical disks into logical volumes. This enables dynamic resizing, pooling, and snapshotting of volumes.
@@ -154,28 +170,29 @@ LVM is ideal for environments that require flexibility, scalability, and efficie
 
 - **What is `sudo`?**  
 `sudo` (short for "superuser do") allows a permitted user to execute commands as another user, typically the superuser (root), on Unix-like operating systems.
-
-### Example Commands:
-- **Check SSH Service Status**:
+- ***Check that the "sudo" program is properly installed***
 ```bash
-sudo service ssh status
+dpkg -l | grep sudo
+```
+-***assigning your new user to the "sudo" group***
+```bash
+sudo adduser newuser sudo
 ```
 
-- **Verify SSH Port**:
+
+- ***Where is sudo logs in /var/log/sudo?***
 ```bash
-sudo ufw status
+cd /var/log/sudo/00/00 && ls
 ```
 
-- **Login to SSH**:
-```bash
-ssh username@yourip -p 4242
-```
 
-- **Login as Root (should be disabled for security)**:
-```bash
-ssh root@yourip -p 4242
-```
+You will see a lot of directories with names like 01 2B 9S 4D etc. They contain the logs we need.
 
+- ***how to see the input and output log***
+```bash
+cat log          #Input log
+cat ttyout       #Output log
+```
 ---
 
 # Script Monitoring
