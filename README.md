@@ -53,6 +53,12 @@ Debian is highly appreciated for its stability and smooth upgrade processes for 
 - **Aptitude**: Offers a visual interface in addition to the command line. Aptitude can automatically resolve package conflicts, while `apt` typically requires manual intervention.
 
 ---
+
+# What is AppArmor?
+
+AppArmor ("Application Armor") is a Linux kernel security module that enables system administrators to restrict a program's capabilities using profiles. These profiles define what the program can do (e.g., network access, file permissions). AppArmor provides **Mandatory Access Control (MAC)**, supplementing traditional Unix **Discretionary Access Control (DAC)**.
+
+---
 # User Management
 
 - **Creating a User**:
@@ -105,12 +111,6 @@ LVM (Logical Volume Management) allows for flexible disk storage management by a
 5. **Logical Extent (LE)**: The corresponding unit in a logical volume.
 
 LVM is ideal for environments that require flexibility, scalability, and efficient storage management, but it may be complex for simpler setups.
-
----
-
-# What is AppArmor?
-
-AppArmor ("Application Armor") is a Linux kernel security module that enables system administrators to restrict a program's capabilities using profiles. These profiles define what the program can do (e.g., network access, file permissions). AppArmor provides **Mandatory Access Control (MAC)**, supplementing traditional Unix **Discretionary Access Control (DAC)**.
 
 ---
 
