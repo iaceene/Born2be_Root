@@ -9,15 +9,11 @@ A hypervisor is software that allows you to run multiple virtual machines on a s
 - **Type 1 Hypervisor**: Sits directly on top of the physical hardware (bare metal) and has direct access to the hardware resources.
 - **Type 2 Hypervisor**: Runs as an application on a host operating system.
 
-![Hypervisors](https://www.stackscale.com/wp-content/uploads/2023/02/Hypervisors-stackscale.jpg)
-
 ---
 
 # Why Use Debian?
 
 Debian is highly appreciated for its stability and smooth upgrade processes for both packages and the entire distribution. It is widely used by software and hardware developers due to its ability to run on numerous architectures and devices. Debian also offers a public bug tracker and other development tools.
-
-![Debian](https://blog.desdelinux.net/wp-content/uploads/2018/06/Debian-10-830x472.jpg)
 
 ---
 
@@ -34,8 +30,6 @@ Debian is highly appreciated for its stability and smooth upgrade processes for 
   - Offers a large selection of software/packages.
   - Easy-to-use installation package manager: `APT`.
 
-![Rocky Linux](https://hackaday.com/wp-content/uploads/2021/06/rocky-linux-featured.jpg)
-
 ---
 
 # The Purpose of Virtual Machines
@@ -49,8 +43,6 @@ Debian is highly appreciated for its stability and smooth upgrade processes for 
 - **Scalability**: VMs allow you to add more physical or virtual servers to distribute workloads, increasing app availability and performance.
 
 - **Security Benefits**: VMs can isolate insecure applications by running them in separate guest operating systems, minimizing risks to the host system. They are also useful for safe virus analysis.
-
-![Virtual Machines](https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/what-is-a-virtual-machine_overview-img?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2560&hei=862&qlt=95)
 
 ---
 
@@ -66,15 +58,18 @@ Debian is highly appreciated for its stability and smooth upgrade processes for 
 
 AppArmor ("Application Armor") is a Linux kernel security module that enables system administrators to restrict a program's capabilities using profiles. These profiles define what the program can do (e.g., network access, file permissions). AppArmor provides **Mandatory Access Control (MAC)**, supplementing traditional Unix **Discretionary Access Control (DAC)**.
 
-![AppArmor](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/AppArmor_logo.svg/440px-AppArmor_logo.svg.png)
-
 ---
 
 # What is UFW?
 
 **Uncomplicated Firewall (UFW)** is a simple program for managing a netfilter firewall on Linux. It provides a straightforward command-line interface for setting up firewall rules, leveraging `iptables` for underlying configuration.
 
-![UFW](https://docs.vultr.com/public/doc-assets/1783/1f939acc6b9bb99c.webp)
+**How to add and remove port 8080 in UFW?**
+```bash
+sudo ufw allow 8080/tcp     #allow
+sudo ufw status             #check
+sudo ufw deny 8080          #deny (yes yes)
+```
 
 ---
 
@@ -85,8 +80,6 @@ AppArmor ("Application Armor") is a Linux kernel security module that enables sy
 - **How SSH works**: SSH uses **public key cryptography**, which involves two keys — a public key (shared with others) and a private key (kept secret). Both sides of the connection authenticate using their respective keys, ensuring secure communication.
   
 - **TCP/IP**: SSH runs on top of the TCP/IP protocol, ensuring the secure delivery of data packets between devices. While HTTPS verifies the identity of a web server, SSH allows for remote command-line access.
-
-![SSH](https://miro.medium.com/v2/resize:fit:1024/0*tgrMTzwM0nO7DDjQ.png)
 
 ---
 
@@ -124,6 +117,23 @@ sudo getent group eval
 - **View Partitions**:
 ```bash
 lsblk
+```
+
+- **How to change hostname?***
+```bash
+sudo nano /etc/hostname
+```
+
+- ***Where is sudo logs in /var/log/sudo?***
+```bash
+cd /var/log/sudo/00/00 && ls
+```
+You will see a lot of directories with names like 01 2B 9S 4D etc. They contain the logs we need.
+
+-***how to see the input and output log***
+```bash
+cat log          #Input log
+cat ttyout       #Output log
 ```
 
 ### How LVM Works
@@ -178,7 +188,11 @@ crontab: The file or command used to define, manage, or edit those scheduled tas
 
 - setup cron to run every minute
 ```bash
-cron
+crontab -e
+
+#edit this line
+
+*/1 * * * * sleep 30s && /path/to/monitoring.sh
 ```
 
 ---
