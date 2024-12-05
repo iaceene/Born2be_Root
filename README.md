@@ -208,7 +208,7 @@ crontab -e
 
 #edit this line
 
-*/1 * * * * sleep 30s && /path/to/monitoring.sh
+*/1 * * * *  && /path/to/monitoring.sh
 ```
 
 ---
