@@ -53,64 +53,6 @@ Debian is highly appreciated for its stability and smooth upgrade processes for 
 - **Aptitude**: Offers a visual interface in addition to the command line. Aptitude can automatically resolve package conflicts, while `apt` typically requires manual intervention.
 
 ---
-
-# What is AppArmor?
-
-AppArmor ("Application Armor") is a Linux kernel security module that enables system administrators to restrict a program's capabilities using profiles. These profiles define what the program can do (e.g., network access, file permissions). AppArmor provides **Mandatory Access Control (MAC)**, supplementing traditional Unix **Discretionary Access Control (DAC)**.
-
----
-
-# What is UFW?
-
-**Uncomplicated Firewall (UFW)** is a simple program for managing a netfilter firewall on Linux. It provides a straightforward command-line interface for setting up firewall rules, leveraging `iptables` for underlying configuration.
-
-**How to add and remove port 8080 in UFW?**
-```bash
-sudo ufw status             #list all the rules
-sudo ufw allow 8080/tcp     #add a rule
-sudo ufw status             #check
-# sudo ufw deny 8080        for deny the connection?
-sudo ufw delete 3           # 3 the number of the rule 8080
-```
-
----
-
-# What is SSH?
-
-**SSH (Secure Shell)** is a protocol for securely accessing remote computers over an unsecured network. It uses encryption and public key authentication to provide a secure connection between devices.
-
-- **How SSH works**: SSH uses **public key cryptography**, which involves two keys — a public key (shared with others) and a private key (kept secret). Both sides of the connection authenticate using their respective keys, ensuring secure communication.
-  
-- **TCP/IP**: SSH runs on top of the TCP/IP protocol, ensuring the secure delivery of data packets between devices. While HTTPS verifies the identity of a web server, SSH allows for remote command-line access.
-
--***check the status***
-```bash
-sudo service ssh status
-```
-
-
--***port 4242***
-```bash
-sudo vim /etc/ssh/sshd_config
-```
-
-
-- **Verify SSH Port**:
-```bash
-sudo ufw status
-```
-
-- **Login to SSH**:
-```bash
-ssh username@yourip -p 4242
-```
-
-- **Login as Root (should be disabled for security)**:
-```bash
-ssh root@yourip -p 4242
-```
----
-
 # User Management
 
 - **Creating a User**:
@@ -166,6 +108,12 @@ LVM is ideal for environments that require flexibility, scalability, and efficie
 
 ---
 
+# What is AppArmor?
+
+AppArmor ("Application Armor") is a Linux kernel security module that enables system administrators to restrict a program's capabilities using profiles. These profiles define what the program can do (e.g., network access, file permissions). AppArmor provides **Mandatory Access Control (MAC)**, supplementing traditional Unix **Discretionary Access Control (DAC)**.
+
+---
+
 # Sudo
 
 - **What is `sudo`?**  
@@ -192,6 +140,57 @@ You will see a lot of directories with names like 01 2B 9S 4D etc. They contain 
 ```bash
 cat log          #Input log
 cat ttyout       #Output log
+```
+---
+
+# What is UFW?
+
+**Uncomplicated Firewall (UFW)** is a simple program for managing a netfilter firewall on Linux. It provides a straightforward command-line interface for setting up firewall rules, leveraging `iptables` for underlying configuration.
+
+**How to add and remove port 8080 in UFW?**
+```bash
+sudo ufw status             #list all the rules
+sudo ufw allow 8080/tcp     #add a rule
+sudo ufw status             #check
+# sudo ufw deny 8080        for deny the connection?
+sudo ufw delete 3           # 3 the number of the rule 8080
+```
+
+---
+
+# What is SSH?
+
+**SSH (Secure Shell)** is a protocol for securely accessing remote computers over an unsecured network. It uses encryption and public key authentication to provide a secure connection between devices.
+
+- **How SSH works**: SSH uses **public key cryptography**, which involves two keys — a public key (shared with others) and a private key (kept secret). Both sides of the connection authenticate using their respective keys, ensuring secure communication.
+  
+- **TCP/IP**: SSH runs on top of the TCP/IP protocol, ensuring the secure delivery of data packets between devices. While HTTPS verifies the identity of a web server, SSH allows for remote command-line access.
+
+-***check the status***
+```bash
+sudo service ssh status
+```
+
+
+-***port 4242***
+```bash
+sudo vim /etc/ssh/sshd_config
+```
+
+
+- **Verify SSH Port**:
+```bash
+sudo ufw status
+```
+
+- **Login to SSH**:
+```bash
+ssh username@yourip -p 4242
+```
+
+- **Login as Root (should be disabled for security)**:
+```bash
+ssh root@yourip -p 4242
 ```
 ---
 
