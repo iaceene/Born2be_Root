@@ -19,13 +19,11 @@ offers a public bug tracker and other tools for developers.
 ![Alt text](https://blog.desdelinux.net/wp-content/uploads/2018/06/Debian-10-830x472.jpg)
 
 # What is the difference between Rocky and Debain?
-- Rocky
-  Rocky is more stable than Debian and supports enterprise applications.
+  - Rocky is more stable than Debian and supports enterprise applications.
   Does not have an upgrade path.
   It comes with many security in-built features that help protect from cyber-attacks using SELinux.
   It helps to reduce the vulnerabilities of privilege escalation attacks. >> "package manager (DNF)"
-- Debian
-  Released and supported by the community
+- Debian Released and supported by the community
   Debian has more software/packages available.
   Debian community members still maintain it.
   It comes with an easy installation package(apt).
