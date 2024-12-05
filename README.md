@@ -65,6 +65,16 @@ Uncomplicated Firewall (UFW) is a program for managing a netfilter firewall desi
 
 ![Alt text](https://docs.vultr.com/public/doc-assets/1783/1f939acc6b9bb99c.webp)
 
+# What is SSH?
+The Secure Shell (SSH) protocol is a method for securely sending commands to a computer over an unsecured network. SSH uses cryptography to authenticate and encrypt connections between devices.
+- SSH runs on top of the TCP/IP protocol suite — which much of the Internet relies upon. TCP stands for Transmission Control Protocol and IP stands for Internet Protocol. TCP/IP pairs those two protocols in order to format, route, and deliver packets. IP indicates, among other information, which IP address a packet should go to (think of a mailing address), while TCP indicates which port a packet should go to at each IP address (think of the floor of a building or an apartment number).
+TCP is a transport layer protocol: it is concerned with the transportation and delivery of data packets. Usually, additional protocols are used on top of TCP/IP in order to put the transmitted data in a form that applications can use. SSH is one such protocol. (Other examples include HTTP, FTP, and SMTP.)
+- SSH is "secure" because it incorporates encryption and authentication via a process called public key cryptography. Public key cryptography is a way to encrypt data, or sign data, with two different keys. One of the keys, the public key, is available for anyone to use. The other key, the private key, is kept secret by its owner. Because the two keys correspond to each other, establishing the key owner's identity requires possession of the private key that goes with the public key.
+These "asymmetric" keys — so called because they have different values — also make it possible for the two sides of the connection to negotiate identical, shared symmetric keys for further encryption over the channel. Once this negotiation is complete, the two sides use the symmetric keys to encrypt the data they exchange.
+In an SSH connection, both sides have a public/private key pair, and each side authenticates the other using these keys. This differentiates SSH from HTTPS, which in most implementations only verifies the identity of the web server in a client-server connection. (Other differences include that HTTPS usually does not allow the client to access the server's command line, and that firewalls sometimes block SSH but almost never block HTTPS.)
+
+![Alt text](https://miro.medium.com/v2/resize:fit:1024/0*tgrMTzwM0nO7DDjQ.png)
+
 
   
 
