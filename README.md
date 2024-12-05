@@ -101,10 +101,16 @@ Strong passwords significantly reduce the likelihood of unauthorized access to s
 -Advantages of Implementing a Password Policy:
 Standardization Across the Organization:
 Having a policy ensures that all users follow the same guidelines, which simplifies training and monitoring efforts. It's easier to ensure consistent security across teams and departments.
-Automated Enforcement:
 
 
-  
+#Hostname and partitions
+
+- how to view the partitions for this virtual machine
+```bash
+lsblk
+```
+- how LVM works and what it is all about ?<br>
+  LVM (Logical Volume Management) is a flexible and dynamic system for managing disk storage in Linux/UNIX systems. It allows administrators to manage disk partitions more efficiently by abstracting physical disks into logical volumes (LVs), making it easier to resize, combine, and manage storage.
 
 
 
