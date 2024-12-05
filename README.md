@@ -130,7 +130,7 @@ cd /var/log/sudo/00/00 && ls
 ```
 You will see a lot of directories with names like 01 2B 9S 4D etc. They contain the logs we need.
 
--***how to see the input and output log***
+- ***how to see the input and output log***
 ```bash
 cat log          #Input log
 cat ttyout       #Output log
@@ -186,7 +186,7 @@ A **cron job** is a scheduled task on Unix-like systems used to automate repetit
 **the diffrence between cron and cronjob?** cron: The daemon (service) that runs in the background and executes scheduled tasks.<br>
 crontab: The file or command used to define, manage, or edit those scheduled tasks.
 
-- setup cron to run every minute
+- ***setup cron to run every minute***
 ```bash
 crontab -e
 
