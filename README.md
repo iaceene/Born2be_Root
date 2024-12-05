@@ -30,19 +30,19 @@ offers a public bug tracker and other tools for developers.
 ![Alt text](https://hackaday.com/wp-content/uploads/2021/06/rocky-linux-featured.jpg)
 
 # What is The purpose of virtual machines?
-- Cost savings
+- Cost savings : 
   running multiple virtual environments from one piece of infrastructure means that you can drastically reduce your physical infrastructure footprint.
   This boosts your bottom line—decreasing the need to maintain nearly as many servers and saving on maintenance costs and electricity.
-- Agility and speed
+- Agility and speed : 
   Spinning up a VM is relatively easy and quick and is much simpler than provisioning an entire new environment for your developers.
   Virtualization makes the process of running dev-test scenarios a lot quicker.
-- Lowered downtime
+- Lowered downtime : 
   VMs are so portable and easy to move from one hypervisor to another on a different machine—this means that they are a great solution for backup,
   in the event the host goes down unexpectedly.
-- Scalability
+- Scalability : 
   VMs allow you to more easily scale your apps by adding more physical or virtual servers to distribute the workload across multiple VMs.
   As a result you can increase the availability and performance of your apps.
-- Security benefits
+- Security benefits : 
   Because virtual machines run in multiple operating systems,
   using a guest operating system on a VM allows you to run apps of questionable security and protects your host operating system.
   VMs also allow for better security forensics, and are often used to safely study computer viruses,
