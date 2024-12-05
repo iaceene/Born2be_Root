@@ -172,8 +172,8 @@ ssh root@yourip -p 4242
 
 ### What is "cron"?
 
-A **cron job** is a scheduled task on Unix-like systems used to automate repetitive tasks. It allows you to run commands or scripts at specific intervals.
-**the diffrence between cron and cronjob?** cron: The daemon (service) that runs in the background and executes scheduled tasks.
+A **cron job** is a scheduled task on Unix-like systems used to automate repetitive tasks. It allows you to run commands or scripts at specific intervals.<br>
+**the diffrence between cron and cronjob?** cron: The daemon (service) that runs in the background and executes scheduled tasks.<br>
 crontab: The file or command used to define, manage, or edit those scheduled tasks.
 
 - setup cron to run every minute
