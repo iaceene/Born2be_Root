@@ -94,8 +94,7 @@ In an SSH connection, both sides have a public/private key pair, and each side a
 ```
 
 - Advantages of a Strong Password Policy:
-- Improved Security:
-Stronger Passwords: By enforcing complexity (e.g., minimum length, combinations of upper and lower case letters, numbers, and symbols), the policy helps ensure passwords are harder for attackers to guess or crack using brute-force methods.
+- Improved Security: Stronger Passwords: By enforcing complexity (e.g., minimum length, combinations of upper and lower case letters, numbers, and symbols), the policy helps ensure passwords are harder for attackers to guess or crack using brute-force methods.
 Protection Against Common Attacks: It helps defend against attacks such as dictionary attacks or password spraying, which rely on simple, predictable passwords.
 Reduced Risk of Data Breaches:
 Strong passwords significantly reduce the likelihood of unauthorized access to sensitive systems. By requiring frequent password changes and prohibiting reused or weak passwords, the policy limits the impact of compromised credentials.
