@@ -8,7 +8,8 @@ A hypervisor is a software that you can use to run multiple virtual machines on 
 Every virtual machine has its own operating system and applications.
 The hypervisor allocates the underlying physical computing resources such as CPU and memory to individual virtual machines as required
 - The type 1 hypervisor sits on top of the bare metal server and has direct access to the hardware resources.
-- the type 2 hypervisor is an application installed on the host operating system
+- the type 2 hypervisor is an application installed on the host operating system.
+
 ![Alt text](https://www.stackscale.com/wp-content/uploads/2023/02/Hypervisors-stackscale.jpg)
 
 # Why do you use debian?
