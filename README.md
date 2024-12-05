@@ -110,7 +110,19 @@ Having a policy ensures that all users follow the same guidelines, which simplif
 lsblk
 ```
 - how LVM works and what it is all about ?<br>
-  LVM (Logical Volume Management) is a flexible and dynamic system for managing disk storage in Linux/UNIX systems. It allows administrators to manage disk partitions more efficiently by abstracting physical disks into logical volumes (LVs), making it easier to resize, combine, and manage storage.
+  LVM (Logical Volume Management) is a flexible and dynamic system for managing disk storage in Linux/UNIX systems. It allows administrators to manage disk
+  partitions more efficiently by abstracting physical disks into logical volumes (LVs), making it easier to resize, combine, and manage storage.
+  
+1. Physical Volume (PV):
+A storage device (hard drive, SSD, or partition) initialized for use with LVM. It forms the foundation of the storage pool.
+Volume Group (VG):
+A collection of physical volumes (PVs) that is treated as a single unit. It abstracts the underlying physical hardware and allows for more flexible storage management.
+2. Logical Volume (LV):
+A virtualized partition created within a volume group. LVs are where data is stored and are presented as if they were physical partitions, but they can be resized or moved more easily.
+3. Physical Extent (PE):
+A small, fixed-size block of storage in a physical volume. Logical volumes are made up of multiple physical extents.
+4. Logical Extent (LE):
+The corresponding unit of storage in a logical volume, which maps to physical extents in the volume group.
 
 
 
