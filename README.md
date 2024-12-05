@@ -27,6 +27,7 @@ offers a public bug tracker and other tools for developers.
   Debian has more software/packages available.
   Debian community members still maintain it.
   It comes with an easy installation package(apt).
+  
 ![Alt text](https://hackaday.com/wp-content/uploads/2021/06/rocky-linux-featured.jpg)
 
 # What is The purpose of virtual machines?
@@ -49,3 +50,37 @@ offers a public bug tracker and other tools for developers.
   isolating the viruses to avoid risking their host computer.
 
 ![Alt text](https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/what-is-a-virtual-machine_overview-img?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2560&hei=862&qlt=95)
+
+# The difference between aptitude and apt?
+- Apt offers a command-line interface, while aptitude offers a visual interface. When facing a package conflict, `apt` will not fix the issue while `aptitude` will suggest a resolution that can do the job.
+- aptitude can interactively retrieve and displays the Debian changelog of all available official packages
+
+# What APPArmor is?
+AppArmor ("Application Armor") is a Linux kernel security module that allows the system administrator to restrict programs' capabilities with per-program profiles. Profiles can allow capabilities like network access, raw socket access, and the permission to read, write, or execute files on matching paths. AppArmor supplements the traditional Unix discretionary access control (DAC) model by providing mandatory access control (MAC).
+
+![Alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/AppArmor_logo.svg/440px-AppArmor_logo.svg.png)
+
+# What is UFW?
+Uncomplicated Firewall (UFW) is a program for managing a netfilter firewall designed to be easy to use. It uses a command-line interface consisting of a small number of simple commands, and uses iptables for configuration.
+
+![Alt text](https://docs.vultr.com/public/doc-assets/1783/1f939acc6b9bb99c.webp)
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
