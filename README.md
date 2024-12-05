@@ -146,8 +146,11 @@ cat ttyout       #Output log
 # What is UFW?
 
 **Uncomplicated Firewall (UFW)** is a simple program for managing a netfilter firewall on Linux. It provides a straightforward command-line interface for setting up firewall rules, leveraging `iptables` for underlying configuration.
-
-**How to add and remove port 8080 in UFW?**
+**How to Check if UFW properly installed **
+  ```bash
+dpkg -l | grep "ufw"
+  ```
+**How to add and remove port 8080 in UFW **
 ```bash
 sudo ufw status             #list all the rules
 sudo ufw allow 8080/tcp     #add a rule
