@@ -10,7 +10,7 @@ This makes it possible to run Linux VMs, for example, on a Windows OS, or to run
 - type of hypervisor?
   The type 1 hypervisor sits on top of the bare metal server and has direct access to the hardware resources.
   the type 2 hypervisor is an application installed on the host operating system
-![Alt text](https://www.researchgate.net/publication/310620289/figure/fig1/AS:431165384466439@1479809246583/Type-1-and-Type-2-Hypervisor.png)
+![Alt text](https://www.stackscale.com/wp-content/uploads/2023/02/Hypervisors-stackscale.jpg)
 
 # Why do you use debian?
 Most users appreciate the stability, and the smooth upgrade processes of both packages and the entire distribution.
