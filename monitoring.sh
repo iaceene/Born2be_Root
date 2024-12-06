@@ -12,7 +12,7 @@ Cores=$(lscpu | grep "Core(s)" | awk '{printf $4}')
 Threads=$(lscpu | grep "Thread(s)" | awk '{printf $4}')
 
 wall "
-    #Architecture :" $(uname -a)
+    "#Architecture :" $(uname -a)
     "#CPU physical :" $(lscpu | grep "CPU(s):" | awk '{print $2}' | head -n 1)
     "#vCPU :" $(printf %d $(echo $Threads*$Cores | bc))
     "#Memory Usage:" $(free -m | cat | grep Mem | awk '{printf "%s/%sMB (%.2f%%)\n", $3, $2, $3 / $2 * 100}')
