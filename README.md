@@ -145,6 +145,16 @@ sudo adduser newuser sudo
 
 **requiretty** --> If set, sudo will only run when the user is logged in to a real tty. When this flag is set, sudo can only be run from a login session and not via other means such as                      cron(8) or cgi-bin scripts. This flag is off by default.
 
+**log_input** --> If set, sudo will run the command in a pseudo tty and log all user input. If the standard input is not connected to the user's tty, due to I/O redirection or because the command is part of a pipeline, that input is also captured and stored in a separate log file.
+Input is logged to the directory specified by the iolog_dir option (
+/var/log/sudo-io by default) using a unique session ID that is included in the normal sudo log line, prefixed with ''TSID=''. The iolog_file option may be used to control the format of the session ID.
+Note that user input may contain sensitive information such as passwords (even if they are not echoed to the screen), which will be stored in the log file unencrypted. In most cases, logging the command output via log_output is all that is required.
+
+
+**log_output** --> If set, sudo will run the command in a pseudo tty and log all output that is sent to the screen, similar to the script(1) command. If the standard output or standard error is not connected to the user's tty, due to I/O redirection or because the command is part of a pipeline, that output is also captured and stored in separate log files.
+Output is logged to the directory specified by the iolog_dir option (
+/var/log/sudo-io by default) using a unique session ID that is included in the normal sudo log line, prefixed with ''TSID=''. The iolog_file option may be used to control the format of the session ID.
+Output logs may be viewed with the sudoreplay(8) utility, which can also be used to list or search the available logs.
 
 
 - ***Where is sudo logs in /var/log/sudo?***
