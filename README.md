@@ -128,12 +128,12 @@ sudo adduser newuser sudo
 ```
 - ***sudo config explain***
   
-**passwd_tries** --> The number of tries a user gets to enter his/her password before sudo logs the failure and exits. The default is 3.
-**passwd_timeout** --> Number of minutes before the sudo password prompt times out, or 0 for no timeout. The timeout may include a fractional component if minute granularity is insufficient, for example 2.5. The default is 5.
-**badpass_message** --> Message that is displayed if a user enters an incorrect password. The default is Sorry, try again. unless insults are enabled.
-**iolog_dir** --> The top-level directory to use when constructing the path name for the input/output log directory. Only used if the log_input or log_output options are enabled or when the LOG_INPUT or LOG_OUTPUT tags are present for a command. The session sequence number, if any, is stored in the directory. The default is /var/log/sudo-io.
-**secure_path** --> Path used for every command run from sudo. If you don't trust the people running sudo to have a sane PATH environment variable you may want to use this. Another use is if you want to have the ''root path'' be separate from the ''user path''. Users in the group specified by the exempt_group option are not affected by secure_path. This option is not set by default.
-**requiretty** --> If set, sudo will only run when the user is logged in to a real tty. When this flag is set, sudo can only be run from a login session and not via other means such as cron(8) or cgi-bin scripts. This flag is off by default.
+-** passwd_tries** --> The number of tries a user gets to enter his/her password before sudo logs the failure and exits. The default is 3.
+-**passwd_timeout** --> Number of minutes before the sudo password prompt times out, or 0 for no timeout. The timeout may include a fractional component if minute granularity is insufficient, for example 2.5. The default is 5.
+-** badpass_message** --> Message that is displayed if a user enters an incorrect password. The default is Sorry, try again. unless insults are enabled.
+-** iolog_dir** --> The top-level directory to use when constructing the path name for the input/output log directory. Only used if the log_input or log_output options are enabled or when the LOG_INPUT or LOG_OUTPUT tags are present for a command. The session sequence number, if any, is stored in the directory. The default is /var/log/sudo-io.
+-** secure_path** --> Path used for every command run from sudo. If you don't trust the people running sudo to have a sane PATH environment variable you may want to use this. Another use is if you want to have the ''root path'' be separate from the ''user path''. Users in the group specified by the exempt_group option are not affected by secure_path. This option is not set by default.
+** requiretty** --> If set, sudo will only run when the user is logged in to a real tty. When this flag is set, sudo can only be run from a login session and not via other means such as cron(8) or cgi-bin scripts. This flag is off by default.
 
 - ***Where is sudo logs in /var/log/sudo?***
 ```bash
