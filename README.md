@@ -231,3 +231,17 @@ Lighttpd is a lightweight, high-performance web server optimized for serving sta
 ### What is MariaDB?
 
 MariaDB is an open-source relational database management system (RDBMS) and a drop-in replacement for MySQL. It is widely used for managing structured data, powering everything from small websites to large enterprise applications.
+
+--- 
+
+### Correction
+
+-**wach ri sudo group bo7do li imkn lina ndkhlo lih lusers, bach iwliw sudo**
+
+la momkin ndiro group akhor nsmiwh exe, wnzido had ster f :
+```bash
+sudo visudo
+# zid had ster
+%exe : ALL=(ALL:ALL) ALL
+```
+wmn b3d nzdio luser had lgroup wradi iwli sudo !! (sudo ri defualt group)
