@@ -242,7 +242,9 @@ PASS_WARN_AGE	7  # The user has to receive a warning message 7 days before their
 # What is UFW?
 
 **Uncomplicated Firewall (UFW)** is a simple program for managing a netfilter firewall on Linux. It provides a straightforward command-line interface for setting up firewall rules, leveraging `iptables` for underlying configuration.
-**How to Check if UFW properly installed **
+
+
+**How to Check if UFW properly installed**
   ```bash
 dpkg -l | grep "ufw"
   ```
