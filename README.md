@@ -57,6 +57,8 @@ Debian is highly appreciated for its stability and smooth upgrade processes for 
 # What is AppArmor?
 
 AppArmor ("Application Armor") is a Linux kernel security module that enables system administrators to restrict a program's capabilities using profiles. These profiles define what the program can do (e.g., network access, file permissions). AppArmor provides **Mandatory Access Control (MAC)**, supplementing traditional Unix **Discretionary Access Control (DAC)**.
+**How AppArmor works**
+AppArmor, short for Application Armor, is a kernel security module for Debian-based Linux distributions that allows you to define per-application security profiles. These profiles restrict what system resources an application can access, effectively creating a sandbox around each application.
 
 ---
 # User Management
@@ -170,6 +172,28 @@ You will see a lot of directories with names like 01 2B 9S 4D etc. They contain 
 cat log          #Input log
 cat ttyout       #Output log
 ```
+
+---
+
+# Password Policies :
+**chage command**
+The chage (change age) command changes the number of days between password changes and the date of the last password change.
+This information is used by the system to determine when a user must change their password.
+**login.defs file**
+The /etc/login.defs file defines the site-specific configuration for the shadow password suite. This file is required. Absence of this file will not prevent system operation, but will probably result in undesirable operation.
+```bash
+# vim /etc/login.defs
+# Password aging controls:
+#
+#	PASS_MAX_DAYS	Maximum number of days a password may be used.
+#	PASS_MIN_DAYS	Minimum number of days allowed between password changes.
+#	PASS_WARN_AGE	Number of days warning given before a password expires.
+#
+PASS_MAX_DAYS	30 # Your password has to expire every 30 days
+PASS_MIN_DAYS	2  # The minimum number of days allowed before the modification of a password will be set to 2.
+PASS_WARN_AGE	7  # The user has to receive a warning message 7 days before their password expires.
+```
+
 ---
 
 # What is UFW?
@@ -261,18 +285,5 @@ Lighttpd is a lightweight, high-performance web server optimized for serving sta
 
 MariaDB is an open-source relational database management system (RDBMS) and a drop-in replacement for MySQL. It is widely used for managing structured data, powering everything from small websites to large enterprise applications.
 
---- 
-
-### Correction
-
-- **wach ri sudo group bo7do li imkn lina ndkhlo lih lusers, bach iwliw sudo**
-
-la momkin ndiro group akhor nsmiwh exe, wnzido had ster f :
-```bash
-sudo visudo
-# zid had ster
-%exe : ALL=(ALL:ALL) ALL
-```
-wmn b3d nzdio luser had lgroup wradi iwli sudo !! (sudo ri defualt group)
 
 
