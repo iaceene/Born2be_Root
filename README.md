@@ -204,6 +204,39 @@ PASS_WARN_AGE	7  # The user has to receive a warning message 7 days before their
 
   To see all [OPTIONS](https://manpages.debian.org/testing/libpam-pwquality/pam_pwquality.8.en.html#OPTIONS)
 
+  to use this options :
+
+  ```bash
+  # vim /etc/pam.d/common-password << u must install the "pam_pwquality" >>
+  # edite this line
+  # password	requisite			pam_pwquality.so <here u can add the options>
+  password	requisite			pam_pwquality.so retry=3 minlen=10 ucredit=1 lcredit=1 dcredit=1 maxrepeat=3 reject_username enforce_for_root difok=7
+  ```
+  - minlen=N :  (N >= 0) This is the maximum credit for having upper case letters in the new password. If you have less than or N upper case letters, each upper case letter will count +1 towards meeting the current minlen value. The default for ucredit is 0 which means there is no bonus for upper case letters in password.
+
+  - ucredit=N : (N >= 0) This is the maximum credit for having upper case letters in the new password. If you have less than or N upper case letters, each upper case letter will count +1 towards meeting the current minlen value. The default for ucredit is 0 which means there is no bonus for upper case letters in password.
+(N < 0) This is the minimum number of upper case letters that must be met for a new password.
+
+  - lcredit=N : (N >= 0) This is the maximum credit for having lower case letters in the new password. If you have less than or N lower case letters, each
+    lower case letter will count +1 towards meeting the current minlen value. The default for lcredit is 0 which means there is no bonus for lower case
+    letters in password.
+    (N < 0) This is the minimum number of lower case letters that must be met for a new password.
+
+  - dcredit=N : (N >= 0) This is the maximum credit for having digits in the new password. If you have less than or N digits, each digit will count +1
+    towards meeting the current minlen value. The default for dcredit is 0 which means there is no bonus for digits in password.
+    (N < 0) This is the minimum number of digits that must be met for a new password.
+
+  - maxrepeat=N : Reject passwords which contain more than N same consecutive characters. The default is 0 which means that this check is disabled.
+ 
+  - reject_username : Password and username cannot be identical
+
+  - difok=N : This argument will change the default of 1 for the number of changes in the new password from the old password.
+    The special value of 0 disables all checks of similarity of the new password with the old password except the new password being exactly the same as the
+    old one.
+ 
+  - enforce_for_root : Rules also apply for root, The module will return error on failed check even if the user changing the password is root. This option is
+    off by default which means that just the message about the failed check is printed but root can change the password anyway. Note that root is not asked
+    for an old password so the checks that compare the old and new password are not performed.
 ---
 
 # What is UFW?
