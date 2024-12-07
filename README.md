@@ -196,6 +196,14 @@ PASS_MIN_DAYS	2  # The minimum number of days allowed before the modification of
 PASS_WARN_AGE	7  # The user has to receive a warning message 7 days before their password expires.
 ```
 
+- **PAM**
+  Linux Pluggable Authentication Modules (PAM) is a suite of libraries that allow a Linux system administrator to configure methods to authenticate users.
+
+- **pam_pwquality**
+  PAM module to perform password quality checking, The first action is to prompt for a single password, check its strength and then, if it is considered strong, prompt for the password a second time (to verify that it was typed correctly on the first occasion). All being well, the password is passed on to subsequent modules to be installed as the new authentication token.
+
+  To see all [OPTIONS](https://manpages.debian.org/testing/libpam-pwquality/pam_pwquality.8.en.html#OPTIONS)
+
 ---
 
 # What is UFW?
