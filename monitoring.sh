@@ -1,7 +1,6 @@
 #!/bin/sh
 
-uptime_duration=$(uptime -s | awk -F ":" '{print ($2 - 10) * 60 + $3}')
-sleep $uptime_duration
+sleep $(uptime -s | awk -F ":" '{print $2 % 10 * 60 + $3}')
 
 cpu_load=$(top -bn1 | grep '^%Cpu' | cut -c 9- | xargs | awk '{printf("%.1f%%"), $1 + $3}')
 IP=$(hostname -I | awk '{printf "IP %s\n", $1}')
