@@ -181,12 +181,12 @@ sudoreplay plays back or lists the output logs created by sudo. When replaying, 
 ---
 
 # Password Policies :
-**chage command**
+- **chage command**
 The chage (change age) command changes the number of days between password changes and the date of the last password change.
 This information is used by the system to determine when a user must change their password.
 
 
-**login.defs file**
+- **login.defs file**
 The /etc/login.defs file defines the site-specific configuration for the shadow password suite. This file is required. Absence of this file will not prevent system operation, but will probably result in undesirable operation.
 ```bash
 # vim /etc/login.defs
