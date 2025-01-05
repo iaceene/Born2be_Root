@@ -1,3 +1,6 @@
+# Setup
+watch this video > [Click](https://www.youtube.com/watch?v=73r3JbkCVy0&ab_channel=MyCodeUrCode)
+
 # How a Virtual Machine Works
 
 Virtual machines (VMs) operate like individual computers with their own operating systems and applications. However, VMs remain completely independent of each other and the physical host machine. A piece of software called a **hypervisor** or **virtual machine manager** allows you to run different operating systems on different virtual machines simultaneously. This makes it possible to run Linux VMs, for example, on a Windows OS or run an older version of Windows on a more current Windows OS.
