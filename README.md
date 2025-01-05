@@ -1,5 +1,5 @@
 # Setup
-Watch this video [Click](https://www.youtube.com/watch?v=73r3JbkCVy0&ab_channel=MyCodeUrCode)
+Watch this [vidoe](https://www.youtube.com/watch?v=73r3JbkCVy0&ab_channel=MyCodeUrCode)
 
 # How a Virtual Machine Works
 
